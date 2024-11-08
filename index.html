@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about" class="active">About Me</a></li>
+        <li><a href="#skills">My Skills</a></li>
+        <li><a href="#projects">My Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+</nav>
+
+<!-- About Me Section -->
+<section id="about">
+    <h1>About Me</h1>
+    <img src="image/profile.jpg" alt="Rohit Kapse" class="profile-pic">
+    <p class="about-text">
+        Hello! I'm Rohit Kapse, a dedicated IT engineer with a strong focus on web development and a passion for crafting immersive digital experiences.
+        With expertise in AWS and Game Development, alongside a foundational knowledge of Python, I bring a unique blend of backend and frontend skills to my work.
+        I'm proficient in HTML, CSS, and JavaScript, enabling me to design and develop user-friendly and visually appealing websites.
+        I’m also highly skilled in communication and teamwork, making me an effective collaborator on complex projects.
+    </p>
+    
+</section>
+
+<!-- Education Section -->
+<section id="education">
+    <h1>Education</h1>
+    <div class="education-item">
+        <h3>South Ponit High School</h3>
+        <p>Completed 10th Grade - 90%</p>
+    </div>
+    <div class="education-item">
+        <h3>Taywade College Nagpur</h3>
+        <p>Completed 11th & 12th Grade - 88%</p>
+    </div>
+    <div class="education-item">
+        <h3>Pallotti College of Engineering</h3>
+        <p>Engineering Studies</p>
+        <p>1st Year Pointer: 8.9</p>
+        <p>2nd Year Pointer: 8.6</p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h1>My Skills</h1>
+    <div class="skills-container" id="skillsContainer">
+        <div class="skill" draggable="true"><b>AWS</b><p>Cloud computing services for scalable applications.</p></div>
+        <div class="skill" draggable="true"><b>Game Development</b><p>Creating interactive experiences using gaming engines.</p></div>
+        <div class="skill" draggable="true"><b>Animation</b><p>Designing dynamic visual elements for digital content.</p></div>
+        <div class="skill" draggable="true"><b>HTML</b><p>The standard markup language for creating web pages.</p></div>
+        <div class="skill" draggable="true"><b>CSS</b><p>A style sheet language for describing the presentation of a document.</p></div>
+        <div class="skill" draggable="true"><b>JavaScript</b><p>A programming language for interactive web pages.</p></div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h1>My Projects</h1>
+    <div class="project-gallery">
+        <div class="project-item">
+            <img src="image/regist.png" alt="Registration Form" class="project-image">
+            <h2>Registration Form</h2>
+            <p>A simple web form for user registration.</p>
+        </div>
+        <div class="project-item">
+            <img src="image/puzzle.avif" alt="Puzzle Game" class="project-image">
+            <h2>Puzzle Game</h2>
+            <p>An interactive puzzle game to test problem-solving skills.</p>
+        </div>
+        <div class="project-item">
+            <img src="image/animation.webp" alt="Animated Cartoon" class="project-image">
+            <h2>Animated Cartoon</h2>
+            <p>A fun cartoon animation project showcasing basic animation skills.</p>
+        </div>
+        <div class="project-item">
+            <img src="image/netflix.jpg" alt="Netflix Clone" class="project-image">
+            <h2>Netflix Clone</h2>
+            <p>A streaming app interface inspired by Netflix.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Contact Me</h1>
+    <p>If you have any questions or would like to reach out, feel free to get in touch!</p>
+    <form id="contactForm" onsubmit="submitForm(); return false;">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Or connect with me on:</h2>
+    <ul class="contact-links">
+        <li><strong>GitHub:</strong> <a href="https://github.com/yourprofile" target="_blank">RohitKapse</a></li>
+        <li><strong>Email:</strong> <a href="mailto:rohitkapse.rk@gmail.com">rohitkapse.rk@gmail.com</a></li>
+    </ul>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>

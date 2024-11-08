@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f; /* Electric Black background */
+    color: #d1d1d1; /* Light gray color for general text */
+}
+
+nav {
+    background-color: #1f1f1f; /* Electric Black for navbar */
+    color: #d1d1d1; /* Lighter color for navbar text */
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d1d1d1; /* Lighter color for links */
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #e3a8a8; /* Lighter color for active link */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px; /* Adjusted padding for sections */
+    margin-top: 50px;
+    text-align: center; /* Center the section text */
+    background-color: #393939; /* Electric Black for section background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the section in the viewport */
+    max-width: 800px; /* Set max width for sections */
+    color: #d1d1d1; /* Lighter text color for sections with dark background */
+}
+
+/* About Me Section */
+#about {
+    min-height: 60vh; /* Set the minimum height */
+}
+
+/* About Me Text */
+.about-text {
+    text-align: center; /* Center the text within the paragraph */
+    margin: 0 20px; /* Add some margin for better spacing on small screens */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #d1d1d1; /* Light gray text color for About Me */
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px; /* Set the width for the profile picture */
+    height: 150px; /* Set the height for the profile picture */
+    border-radius: 50%; /* Circular shape */
+    margin: 20px 0; /* Add margin above and below the image */
+    object-fit: cover; /* Maintain aspect ratio and fill the circle */
+}
+
+/* Education Section */
+#education {
+    padding: 30px 20px; /* Adjust padding for education section */
+}
+
+/* Skills Section */
+#skills {
+    padding: 30px 20px; /* Adjust padding around the skills section */
+    background-color: #393939; /* Electric Black background for skills */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    color: #d1d1d1; /* Lighter text color for skills */
+}
+
+#skills h1 {
+    text-align: center; /* Center the section heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #e3a8a8; /* Lighter color for heading */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of skill items */
+    justify-content: center; /* Center the skill items */
+}
+
+.skill {
+    background-color: #1f1f1f; /* Electric Black for skill boxes */
+    padding: 15px; /* Padding inside the skill boxes */
+    margin: 10px; /* Margin between skill boxes */
+    text-align: center; /* Center text in skill boxes */
+    flex: 1 0 150px; /* Allow flexibility and set minimum width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    color: #d1d1d1; /* Lighter text color for skill boxes */
+}
+
+/* Projects Section */
+#projects {
+    padding: 30px 20px; /* Adjust padding for the projects section */
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of project items */
+    justify-content: center; /* Center the project items */
+}
+
+.project-item {
+    margin: 15px; /* Space between project items */
+    text-align: center; /* Center text in project items */
+    background-color: #1f1f1f; /* Electric Black for project items */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    width: calc(50% - 30px); /* Set width to occupy 50% of the row minus margin */
+    max-width: 250px; /* Set a max width for the project item */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transform and shadow */
+    color: #d1d1d1; /* Lighter text color for project items */
+}
+
+.project-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.2s; /* Smooth transform for image */
+}
+
+/* Crop and Zoom for specific images */
+.project-item.portfolio, .project-item.weather {
+    overflow: hidden; /* Crop the image */
+    border-radius: 8px; /* Rounded corners for cropped images */
+}
+
+.project-item.portfolio .project-image, 
+.project-item.weather .project-image {
+    transform: scale(1); /* Normal scale */
+    transition: transform 0.2s; /* Smooth transform for image */
+}
+
+.project-item.portfolio:hover .project-image, 
+.project-item.weather:hover .project-image {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+/* Hover effect on project item */
+.project-item:hover {
+    transform: translateY(-5px); /* Lift the card up slightly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
+}
+
+/* Contact Section */
+#contact {
+    padding: 30px 20px; /* Adjust padding for the contact section */
+    background-color: #393939; /* Electric Black background for contact section */
+    text-align: center; /* Center all text in the contact section */
+    color: #d1d1d1; /* Lighter text color for contact section */
+}
+
+.form-group {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center label and input */
+    margin: 15px 0; /* Space between form groups */
+    text-align: left; /* Left-align text in form groups for the label */
+}
+
+input, textarea {
+    width: 70%; /* Set width for input and textarea */
+    padding: 10px; /* Add padding */
+    margin-left: 15px; /* Add space between label and input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+textarea {
+    height: 100px; /* Set a fixed height for the textarea */
+    resize: none; /* Prevent resizing */
+}
+
+/* Centering the contact links */
+.contact-links {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.contact-links li {
+    margin: 5px 0; /* Space between list items */
+    color: #d1d1d1; /* Lighter color for contact links */
+}
